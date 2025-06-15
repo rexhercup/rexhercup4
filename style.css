@@ -1,6 +1,6 @@
 :root {
-    --height-navbar: 9vh;
-    --height-collab: 12vh;
+    --height-navbar: 9dvh;
+    --height-collab: 12dvh;
     --color-solid-background: rgb(10, 16, 40);
 }
 
@@ -15,7 +15,7 @@ body {
 
 #container {
     width: 100vw;
-    height: 100vh;
+    height: 100dvh;
 }
 
 #navbar {
@@ -24,7 +24,7 @@ body {
     align-items: center;
     width: 100%;
     height: var(--height-navbar);
-    padding: 1vh;
+    padding: 1dvh;
     box-sizing: border-box;
 }
 
@@ -32,7 +32,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: calc(100vh - var(--height-navbar) - var(--height-collab));
+    height: calc(100dvh - var(--height-navbar) - var(--height-collab));
 }
 
 #titleRC {
@@ -105,7 +105,7 @@ body {
 }
 
 #centralContent {
-    margin-top: calc(0vh - var(--height-navbar) - 50px);
+    margin-top: calc(0dvh - var(--height-navbar) - 50px);
 }
 
 .iconLink {
@@ -237,7 +237,7 @@ body {
     top: 0;
     left: 0;
     width: 100vw;
-    height: 100vh;
+    height: 100dvh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -291,7 +291,7 @@ body {
 
 @media (max-width: 785px) {
     :root {
-        --height-collab: 10vh;
+        --height-collab: 10dvh;
     }
     #linksRC {
         grid-template-columns: repeat(2, 1fr);
@@ -301,7 +301,7 @@ body {
 
 @media (max-width: 650px) {
     :root {
-        --height-collab: 10vh;
+        --height-collab: 10dvh;
     }
     #titleRC {
         font-size: 70px;
@@ -313,7 +313,7 @@ body {
 
 @media (max-width: 550px) {
     :root {
-        --height-collab: 9vh;
+        --height-collab: 9dvh;
     }
 }
 
@@ -353,7 +353,7 @@ body {
         padding: 15px;
     }
     #centralContent {
-        margin-top: calc(0vh - var(--height-navbar));
+        margin-top: calc(0dvh - var(--height-navbar));
     }
 }
 
@@ -362,7 +362,7 @@ body {
         font-size: 45px;
     }
 	:root {
-        --height-collab: 8vh;
+        --height-collab: 8dvh;
     }
 	#contactButton {
         font-size: 16px;
