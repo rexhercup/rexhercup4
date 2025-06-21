@@ -270,6 +270,63 @@ body {
     font-size: 24px;
 }
 
+#enrollmentDiv {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100dvh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, .4);
+    z-index: 10;
+}
+
+#enrollment_cont {
+    background: white;
+    border-radius: 20px;
+    padding: 30px;
+    position: relative;
+    box-shadow: 0px 0px 30px 5px rgba(255, 255, 255, 0.2);
+    max-width: 500px; /* Limita el ancho para mejor lectura */
+    margin: 20px; /* Margen para pantallas pequeñas */
+}
+
+#closeEnrollment {
+    position: absolute;
+    right: 10px; /* Ajustado a 10px para consistencia */
+    top: 10px;   /* Ajustado a 10px para consistencia */
+    cursor: pointer;
+}
+/* Estilos para la lista de pasos de inscripción */
+.enrollment-steps-container {
+    padding: 0 10px; /* Asegura un padding lateral si el texto no va de borde a borde */
+    /* Puedes ajustar este valor si necesitas más o menos espacio a los lados del texto de los pasos */
+}
+
+.enrollment-steps-list {
+    list-style-type: none; /* Opcional: quita los puntos predeterminados de la lista si los números ya son parte del texto */
+    padding-left: 0; /* Quita el padding predeterminado de las listas para que no se vea indentado */
+    margin-top: 15px; /* Espacio entre el párrafo introductorio y la lista */
+    margin-bottom: 0; /* Asegura que no haya un margen inferior excesivo para la lista en general */
+}
+
+.enrollment-steps-list li {
+    margin-bottom: 20px; /* **Ajusta este valor para controlar la separación entre los puntos** */
+    font-size: 20px; /* Asegura que el tamaño de fuente sea consistente con tu diseño */
+    text-align: justify; /* Mantiene el texto justificado */
+    line-height: 1.4; /* Mejora la legibilidad dentro de cada punto si el texto es largo */
+}
+
+#titleInscribirse {
+    text-align: center;
+    font-size: 35px;
+    display: block;
+    font-weight: 800;
+    margin-top: 15px;
+}
+
 @media (max-width: 1050px) {
     .linkRC {
         padding: 30px 15px;
@@ -316,6 +373,16 @@ body {
     :root {
         --height-collab: 9dvh;
     }
+    .enrollment-steps-list li {
+        text-align: left;
+        font-size: 17px;
+    }
+    #titleInscribirse {
+        font-size: 30px;
+    }
+    #enrollment_cont {
+        padding: 20px;
+    }
 }
 
 @media (max-width: 485px) {
@@ -342,6 +409,9 @@ body {
     #contactButton {
         font-size: 20px;
     }
+    .enrollment-steps-list li {
+        font-size: 15px;
+    }
 }
 
 @media (max-width: 410px) {
@@ -367,6 +437,15 @@ body {
     }
 	#contactButton {
         font-size: 16px;
+    }
+    .enrollment-steps-list li {
+        font-size: 14px;
+    }
+    #titleInscribirse {
+        font-size: 25px;
+    }
+    #enrollment_cont {
+        padding: 15px;
     }
 }
 
