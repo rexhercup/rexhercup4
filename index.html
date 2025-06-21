@@ -12,6 +12,15 @@
     
     <title>Rexher Cup IV</title>
 </head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-RL789DQE43"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-RL789DQE43');
+</script>
 <body>
     <div id="container">
         <div id="navbar">
@@ -22,11 +31,11 @@
             <div id="centralContent">
                 <p id="titleRC">Rexher Cup IV<br><span id="styleChessSociety">Chess Society<img style="height: 0.75em; margin-left: 7px;" src="./imgs/logo_chesssociety_final.png"></span></p>
                 <div id="linksRC">
-                    <a class="linkRC color-green" target="_blank"><span class="material-symbols-outlined iconLink">sort</span>Ranking Inicial</a>
+                    <a class="linkRC color-green" target="_blank" href="https://bit.ly/participantes-rexhercup4"><span class="material-symbols-outlined iconLink">sort</span>Ranking Inicial</a>
                     <a class="linkRC color-red" target="_blank"><span class="material-symbols-outlined iconLink">group_add</span>Inscribirme</a>
-                    <a class="linkRC color-blue" target="_blank"><span class="material-symbols-outlined iconLink">trophy</span>Torneo</a>
-                    <a class="linkRC color-navy" target="_blank"><span class="material-symbols-outlined iconLink">groups</span>Equipo Lichess</a>
-                    <a class="linkRC color-orange" target="_blank"><span class="material-symbols-outlined iconLink">description</span>Bases</a>
+                    <a class="linkRC color-blue" target="_blank" href="https://lichess.org/tournament/kLu0SJzZ"><span class="material-symbols-outlined iconLink">trophy</span>Torneo</a>
+                    <a class="linkRC color-navy" target="_blank" href="https://lichess.org/team/rexher-cup-iv-chess-society"><span class="material-symbols-outlined iconLink">groups</span>Equipo Lichess</a>
+                    <a class="linkRC color-orange" target="_blank" href="https://rexhercup.github.io/rexhercup4/Bases.pdf"><span class="material-symbols-outlined iconLink">description</span>Bases</a>
                     <a class="linkRC color-purple" target="_blank" href="https://www.instagram.com/rexhercup/"><span class="material-symbols-outlined iconLink">photo_camera</span>Instagram</a>
                 </div>
             </div>
@@ -53,7 +62,47 @@
                     mail
                 </span> rexhercup@gmail.com
                 </span>
-            </div
+                <br><br>
+                <span id="emailContact">
+                <span class="material-symbols-outlined" style="vertical-align: middle;">
+                    photo_camera
+                </span> Instagram: @rexhercup
+                </span>
+            </div>
+        </div>
+        <div id="enrollmentDiv" class="displayNoneClass">
+            <div id="enrollment_cont">
+    <span id="closeEnrollment" class="material-symbols-outlined" onclick="toggleEnrollment()">
+        close
+    </span>
+    <span id="titleInscribirse">
+        Pasos para Inscribirte
+    </span><br>
+    <div class="enrollment-steps-container">
+        <ul class="enrollment-steps-list">
+            <li>
+                1. <strong>Rellena el formulario de inscripción:</strong><br>
+                Accede al siguiente enlace y completa el formulario: <br>
+                👉 <a href="https://forms.gle/9awn6ZXiY3oFERMd8" target="_blank" style="color: #16A085; text-decoration: none; font-weight: bold;">Formulario de Inscripción</a>
+            </li>
+            <li>
+                2. <strong>Únete al equipo de Lichess del torneo:</strong><br>
+                Una vez enviado el formulario, solicita unirte al equipo oficial de Lichess de la Rexher Cup IV:<br>
+                👉 <a href="https://lichess.org/team/rexher-cup-iv-chess-society" target="_blank" style="color: #16A085; text-decoration: none; font-weight: bold;">Equipo de Lichess</a>
+            </li>
+            <li>
+                3. <strong>Entra en el torneo:</strong><br>
+                Cuando seas aceptado en el equipo, ya podrás unirte al torneo de la Fase Clasificatoria:<br>
+                👉 <a href="https://lichess.org/tournament/kLu0SJzZ" target="_blank" style="color: #16A085; text-decoration: none; font-weight: bold;">Torneo</a>
+            </li>
+            <li>
+                4. <strong>¡Todo listo!</strong><br>
+                Solo queda esperar a que comience el torneo. ¡Buena suerte!
+            </li>
+        </ul>
+    </div>
+</div>
+
         </div>
     </div>
     <script>
@@ -64,6 +113,26 @@
             contactDiv.classList.toggle("displayNoneClass");
         }
 
+        // Nuevo: Cerrar el div de contacto al hacer clic fuera
+        contactDiv.addEventListener("click", function(event) {
+            if (event.target === contactDiv) { // Verifica si el clic fue directamente en el fondo oscuro
+                toggleContact();
+            }
+        });
+
+        let enrollmentDiv = document.getElementById("enrollmentDiv");
+        document.querySelector(".linkRC.color-red").addEventListener("click", toggleEnrollment);
+
+        function toggleEnrollment() {
+            enrollmentDiv.classList.toggle("displayNoneClass");
+        }
+
+        // Nuevo: Cerrar el div de inscripción al hacer clic fuera
+        enrollmentDiv.addEventListener("click", function(event) {
+            if (event.target === enrollmentDiv) { // Verifica si el clic fue directamente en el fondo oscuro
+                toggleEnrollment();
+            }
+        });
     </script>
 </body>
 </html>
